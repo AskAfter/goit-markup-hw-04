@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -94,6 +93,8 @@ img {
     background-color: var(--white);
     border-bottom: 1px solid var(--cornflower);
     padding: 24px 0;
+
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .logo {
     font-family: var(--second-family);
@@ -117,7 +118,6 @@ img {
 }
 .address-list {
     gap: 40px;
-    
 }
 
 .logo .logo-studio {
@@ -135,6 +135,8 @@ img {
     line-height: calc(24/16);
     padding-bottom: 24px;
     padding-top: 24px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-links.current {
@@ -164,6 +166,8 @@ img {
     color: inherit;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contact:hover,
 .header-contact:focus {
@@ -182,10 +186,15 @@ img {
     padding-top: 188px;
     padding-bottom: 188px;
     height: 600px;
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/people_office.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1440px;
 }
 .hero > .container {
     display: block;
     max-width: 1440px;
+    
 }
 
 .hero-title {
@@ -215,6 +224,8 @@ img {
     padding-top: 16px 32px;
     border-radius: 4px;
     margin: 0 auto;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -226,6 +237,22 @@ img {
 .section {
     padding-top: 120px;
     padding-bottom: 120px;
+}
+
+.preferences-box {
+    display: flex;;
+    width: 264px;
+    height: 112px;
+    border: 1px solid var(--light-slate);
+    background-color: var(--cloud);
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.icon {
+    fill: var(--white);
 }
 
 .preferences-section .container {
@@ -310,6 +337,30 @@ img {
     flex-basis: calc((100% - 72px) / 4);
     background-color: var(--white);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.social-ref {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--iris);
+    fill: var(--cloud);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-ref:hover,
+.social-ref:focus {
+    background-color: var(--ocean);
 }
 
 .team-card {
@@ -329,6 +380,7 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-align: center;
+    margin-bottom: 8px;
 }
 
 /*Fourth section*/
@@ -372,6 +424,33 @@ img {
 
 .portfolio-list-li {
     width: calc((100% - 48px) / 3);
+    
+    
+}
+
+.image-sumb {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transform: translateY(100%);
+    background-color: var(--iris);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-card:hover .overlay {
+    transform: translateY(0);
+}
+
+.portfolio-card:hover {
+    cursor: pointer;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 /*Footer*/
@@ -384,12 +463,42 @@ img {
 }
 
 .footer .container {
-    display: block;
+    display: flex;
     max-width: 1440px;
 }
 
 .footer-studio {
     color: var(--cloud);
+}
+
+.footer-first {
+    margin-right: 120px;
+}
+
+.footer-text-links {
+    color: var(--white);
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.32px;
+    margin-bottom: 16px;
+}
+
+.footer .social-links {
+    gap: 16px;
+}
+
+.footer .social-ref {
+    display: flex;
+    background-color: var(--iris);
+    fill: var(--cloud);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer .social-ref:hover,
+.footer .social-ref:focus {
+    background-color: var(--green);
 }
 
 .footer-logo {
